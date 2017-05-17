@@ -1,0 +1,82 @@
+@font-face {
+    font-family: nmj;
+    src: url('NanumMyeongjo.ttf');
+}
+.center {
+    padding: 0;
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.pw {
+    height: 25px;
+    vertical-align: middle;
+    padding-top: 8%;
+    text-align: center;
+    align-items : center;
+    -webkit-text-security: disc;
+}
+body {
+    font-family: nmj;
+    color: #FFF;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+.time {
+    text-align: center;
+    font-size: 300%;
+}
+.date {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 120%;
+}
+.btn-pw {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px;
+    border-style: solid;
+    border-color: #fff;
+    margin: 10px;
+    color: white;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-family: nmj;
+    font-size: 150%;
+    cursor: pointer;
+}
+#inputs {
+    padding-top: 5%;
+}
+.hint {
+    text-align: center;
+    font-size: 75%;
+}
+.hint-image {
+    padding-top: 10%;
+    height: auto;
+    width: auto;
+    max-width: 75%;
+    max-height: 250px;
+}
+.ans-textbox { 
+    margin-top: 30px;
+    border: 0;
+    -webkit-border-radius: 7px; 
+    -moz-border-radius: 7px; 
+    border-radius: 7px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 105%;
+    text-align: center;
+    outline:0; 
+    height:30px;
+    width: 60%;
+    padding-left: 10px;
+    font-family: nmj;
+    align-self: center;
+} 
