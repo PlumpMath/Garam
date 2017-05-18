@@ -60,7 +60,8 @@
             android:name=".PasswordManageActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity android:name=".EditActivity" />
-        <activity android:name=".MyLockActivity"></activity>
+        <activity android:name=".MyLockActivity" />
+        <activity android:name=".NotesManageActivity"></activity>
     </application>
 
 </manifest>

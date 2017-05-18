@@ -84,9 +84,8 @@ public class SaveHelper extends SQLiteOpenHelper {
     public List<Memo> getMemosType(String type) {
         Log.d("GaramDB","getMemosType "+type);
         List<Memo> memos = new ArrayList<>();
-        String query = "SELECT * FROM "+MEMO_TABLE+" WHERE type="+type;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(query,null);
+        Cursor cursor = db.query(MEMO_TABLE,COLS,KEY_TYPE+" = ?",new String[] {String.valueOf(type)},null,null,null,null);
         if(cursor.moveToFirst()) {
             do {
                 Memo memo = new Memo();
