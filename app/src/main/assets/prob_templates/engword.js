@@ -38,8 +38,7 @@ window.onload = function() {
     var query = getQueryParams(document.location.search);
     ans=query["ans"];
     probID=query["probID"];
-    var image = document.getElementById("hint-image");
-    image.src = query["hint"];
+    document.getElementById("text-hint").innerText = query["hint"];
     document.getElementById('btn-submit').onclick = eval;
     document.getElementById('ans-textbox').onkeyup = function(e) {
         if(e.keyCode == 13) eval();

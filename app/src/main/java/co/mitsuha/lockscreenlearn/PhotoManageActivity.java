@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.List;
 
-public class PhotoManageActivity extends Activity {
+public class PhotoManageActivity extends BaseActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 252525252;
     SaveHelper saveHelper;

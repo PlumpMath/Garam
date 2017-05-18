@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class NotesManageActivity extends Activity  {
+public class NotesManageActivity extends BaseActivity  {
 
     private SaveHelper saveHelper;
     private List<Memo> listItems;
@@ -50,6 +50,9 @@ public class NotesManageActivity extends Activity  {
             case "image":
                 bg.setColorFilter(ContextCompat.getColor(context, R.color.colorPurple), PorterDuff.Mode.MULTIPLY);
                 break;
+            case "engword":
+                bg.setColorFilter(ContextCompat.getColor(context, R.color.colorRed), PorterDuff.Mode.MULTIPLY);
+                break;
             default:
                 break;
         }
@@ -61,6 +64,9 @@ public class NotesManageActivity extends Activity  {
                 break;
             case "password":
                 tv.setText("비밀번호");
+                break;
+            case "engword":
+                tv.setText("영단어");
                 break;
             default:
                 break;

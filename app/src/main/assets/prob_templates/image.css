@@ -1,6 +1,6 @@
 @font-face {
     font-family: nmj;
-    src: url('NanumMyeongjo.ttf');
+    src: url('./../NanumMyeongjo.ttf');
 }
 .center {
     padding: 0;
@@ -76,7 +76,6 @@ body {
     outline:0; 
     height:30px;
     width: 60%;
-    padding-left: 10px;
     font-family: nmj;
     align-self: center;
 } 

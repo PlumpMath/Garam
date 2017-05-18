@@ -15,10 +15,16 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Random;
 
-public class LockScreenActivity extends Activity {
+public class LockScreenActivity extends BaseActivity {
 
     SaveHelper saveHelper;
 
@@ -67,7 +73,20 @@ public class LockScreenActivity extends Activity {
             return;
         }
         int choose = new Random().nextInt(memos.size());
-        wv.loadUrl("file:///android_asset/prob_templates/"+memos.get(choose).type+".html?probID="+memos.get(choose).ID+"&ans="+memos.get(choose).password+"&hint="+memos.get(choose).title);
+        Memo chosen = memos.get(choose);
+        if(chosen.type.equals("engword")) {
+            String txt = loadJSON();
+            try {
+                JSONArray ja = new JSONArray(txt);
+                JSONObject jObject = ja.getJSONObject(new Random().nextInt(ja.length()));
+                wv.loadUrl("file:///android_asset/prob_templates/engword.html?probID="+chosen.ID+"&ans="+jObject.getString("korean")+"&hint="+jObject.getString("english"));
+            } catch (JSONException e) {
+                onCreate(savedInstanceState);
+                return;
+            }
+
+        }
+        else wv.loadUrl("file:///android_asset/prob_templates/"+chosen.type+".html?probID="+chosen.ID+"&ans="+chosen.password+"&hint="+chosen.title);
         wv.addJavascriptInterface(new judgeJsInteface(this), "judge");
     }
 
@@ -78,5 +97,21 @@ public class LockScreenActivity extends Activity {
 
     public void unlockScreen(View view) {
         this.finish();
+    }
+
+    public String loadJSON() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("toeic.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 }

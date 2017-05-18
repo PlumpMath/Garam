@@ -14,7 +14,6 @@
     vertical-align: middle;
     padding-top: 8%;
     text-align: center;
-    
     align-items : center;
     -webkit-text-security: disc;
 }
@@ -33,6 +32,7 @@ body {
     font-size: 120%;
 }
 .btn-pw {
+    align-self: center;
     display: inline-block;
     border-radius: 50%;
     background-color: transparent;
@@ -46,7 +46,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-family: nmj;
-    font-size: 200%;
+    font-size: 150%;
     cursor: pointer;
 }
 table {
@@ -67,5 +67,23 @@ td {
 }
 .hint {
     text-align: center;
-    font-size: 105%;
+    margin-top: 30px;
+    font-size: 150%;
 }
+.ans-textbox { 
+    border: 0;
+    -webkit-border-radius: 7px; 
+    -moz-border-radius: 7px; 
+    border-radius: 7px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 105%;
+    text-align: center;
+    outline:0; 
+    height:30px;
+    width: 60%;
+    font-family: nmj;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+} 

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,10 @@ public class MainActivity extends Activity {
     }
     public void mylockMenuClick(View v) {
         Intent it = new Intent(this,MyLockActivity.class);
+        startActivity(it);
+    }
+    public void engwordMenuClick(View v) {
+        Intent it = new Intent(this,EnglishWordManageActivity.class);
         startActivity(it);
     }
 }

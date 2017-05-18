@@ -23,7 +23,6 @@
             android:layout_width="140dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-            android:onClick="mylockMenuClick"
             android:src="@drawable/mylock" />
 
         <TextView

@@ -57,6 +57,9 @@ public class nmListViewAdapter extends BaseAdapter {
             case "image":
                 bg.setColorFilter(ContextCompat.getColor(context, R.color.colorPurple), PorterDuff.Mode.MULTIPLY);
                 break;
+            case "engword":
+                bg.setColorFilter(ContextCompat.getColor(context, R.color.colorRed), PorterDuff.Mode.MULTIPLY);
+                break;
             default:
                 break;
         }

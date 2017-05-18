@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MyLockActivity extends Activity {
+public class MyLockActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,9 @@ public class MyLockActivity extends Activity {
     }
     public void imageMenuClick(View v) {
         openNMActivity("image");
+    }
+    public void engwordMenuClick(View v) {
+        openNMActivity("engword");
     }
     private void openNMActivity(String type) {
         Intent in = new Intent(this,NotesManageActivity.class);

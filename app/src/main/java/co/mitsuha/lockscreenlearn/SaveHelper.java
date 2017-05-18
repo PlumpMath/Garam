@@ -117,4 +117,10 @@ public class SaveHelper extends SQLiteOpenHelper {
         db.delete(MEMO_TABLE,KEY_ID+" = ?",new String[]{String.valueOf(id)});
         db.close();
     }
+    public void deleteAll() {
+        Log.d("GaramDB","Delete All");
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(MEMO_TABLE,null,null);
+        db.close();
+    }
 }

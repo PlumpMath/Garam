@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-public class PasswordManageActivity extends Activity {
+public class PasswordManageActivity extends BaseActivity {
 
     SaveHelper saveHelper;
     final String typeText = "password";

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
+    tools:context="co.mitsuha.lockscreenlearn.EnglishWordManageActivity"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:onClick="testClick"
+        android:src="@drawable/engword_info" />
+
+    <Button
+        android:id="@+id/toeic1Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="addItemClick"
+        android:text="TOEIC 대비 Voca 1"
+        android:textColor="#000" />
+
+    <Button
+        android:id="@+id/toeic2Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="addItemClick"
+        android:text="TOEIC 대비 Voca 2"
+        android:textColor="#000" />
+
+    <Button
+        android:id="@+id/toeic3Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:onClick="addItemClick"
+        android:text="TOEIC 대비 Voca 3"
+        android:textColor="#000" />
+
+</LinearLayout>
