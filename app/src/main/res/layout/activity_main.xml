@@ -52,7 +52,13 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-
+            <ImageView
+                android:id="@+id/patternImageView"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:onClick="patternMenuClick"
+                android:src="@drawable/pattern"/>
             <ImageView
                 android:id="@+id/engwordImageView"
                 android:layout_width="100dp"

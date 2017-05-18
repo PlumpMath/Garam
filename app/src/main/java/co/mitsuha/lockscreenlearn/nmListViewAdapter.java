@@ -47,7 +47,10 @@ public class nmListViewAdapter extends BaseAdapter {
         Button deleteButton = (Button) convertView.findViewById(R.id.nm_delete);
         nmListViewItem item = listViewItemList.get(position);
 
-        titleTextView.setText(showTitlePassword==true?item.getPassword():item.getTitle());
+        if(item.getType().equals("pattern")) {
+            titleTextView.setText(item.getPassword().substring(0,item.getPassword().length()-9));
+        }
+        else titleTextView.setText(showTitlePassword==true?item.getPassword():item.getTitle());
         idTextView.setText(String.valueOf(item.getID()));
         Drawable bg = ContextCompat.getDrawable(context,R.drawable.nmlistview_del);
         switch(item.getType()) {
@@ -59,6 +62,9 @@ public class nmListViewAdapter extends BaseAdapter {
                 break;
             case "engword":
                 bg.setColorFilter(ContextCompat.getColor(context, R.color.colorRed), PorterDuff.Mode.MULTIPLY);
+                break;
+            case "pattern":
+                bg.setColorFilter(ContextCompat.getColor(context, R.color.colorGreen), PorterDuff.Mode.MULTIPLY);
                 break;
             default:
                 break;

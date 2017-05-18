@@ -37,6 +37,14 @@
             android:textAlignment="center"
             android:textSize="18dp"
             android:textColor="#FFFFFF"></TextView>
+        <TextView
+            android:id="@+id/noItemsNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_marginTop="70dp"
+            android:visibility="gone"
+            android:text="문제가 없습니다 :("/>
         <ListView
            android:id="@+id/noteManageListView"
            android:layout_height="wrap_content"

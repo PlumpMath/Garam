@@ -84,7 +84,23 @@ public class LockScreenActivity extends BaseActivity {
                 onCreate(savedInstanceState);
                 return;
             }
-
+        }
+        else if(chosen.type.equals("pattern")) {
+            StringBuilder sb = new StringBuilder("file:///android_asset/prob_templates/"+chosen.type+".html?probID="+chosen.ID);
+            sb.append("&title=");
+            sb.append(chosen.password.substring(0,chosen.password.length()-9));
+            sb.append("&ans=");
+            sb.append(chosen.password.substring(chosen.password.length()-9));
+            try {
+                JSONArray ja = new JSONArray(chosen.title);
+                for(int i=0;i<9;i++) {
+                    sb.append("&t"+String.valueOf(i+1)+"=");
+                    sb.append(ja.get(i));
+                }
+            } catch(JSONException e) {
+                onCreate(savedInstanceState);
+            }
+            wv.loadUrl(sb.toString());
         }
         else wv.loadUrl("file:///android_asset/prob_templates/"+chosen.type+".html?probID="+chosen.ID+"&ans="+chosen.password+"&hint="+chosen.title);
         wv.addJavascriptInterface(new judgeJsInteface(this), "judge");

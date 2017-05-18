@@ -4,7 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFF"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal"
     tools:context="co.mitsuha.lockscreenlearn.PatternManageActivity">
 
+    <ImageView android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/pattern_info">
+    </ImageView>
+
+    <EditText
+        android:id="@+id/patternTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="주제"
+        android:singleLine="true" />
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="280dp">
+        <com.eftimoff.patternview.PatternView
+            xmlns:patternview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/patternLock"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            patternview:circleSize="0dp"
+            patternview:pathColor="@color/colorGreen"
+            patternview:circleColor="@android:color/transparent"
+            patternview:dotColor="#000"
+            patternview:gridRows="3"
+            patternview:gridColumns="3"/>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn1"
+            android:onClick="textItemClick"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="103dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn2"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="187dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn3"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="143dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn4"
+            android:onClick="textItemClick"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="143dp"
+            android:layout_marginLeft="103dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn5"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="143dp"
+            android:layout_marginLeft="187dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn6"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="227dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn7"
+            android:onClick="textItemClick"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="227dp"
+            android:layout_marginLeft="103dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn8"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+        <Button android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="227dp"
+            android:layout_marginLeft="187dp"
+            android:background="@drawable/shape_red"
+            android:id="@+id/patternTextBtn9"
+            android:onClick="textItemClick"
+            android:textSize="15dp"
+            android:text="글씨">
+        </Button>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/passwordAddBtn"
+        android:layout_marginTop="10dp"
+        android:text="추가"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:onClick="addItemClick"
+        />
 </LinearLayout>

@@ -22,6 +22,9 @@ public class MyLockActivity extends BaseActivity {
     public void engwordMenuClick(View v) {
         openNMActivity("engword");
     }
+    public void patternMenuClick(View v) {
+        openNMActivity("pattern");
+    }
     private void openNMActivity(String type) {
         Intent in = new Intent(this,NotesManageActivity.class);
         in.putExtra("type",type);

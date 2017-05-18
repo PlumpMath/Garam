@@ -32,4 +32,8 @@ public class MainActivity extends BaseActivity {
         Intent it = new Intent(this,EnglishWordManageActivity.class);
         startActivity(it);
     }
+    public void patternMenuClick(View v) {
+        Intent it = new Intent(this,PatternManageActivity.class);
+        startActivity(it);
+    }
 }

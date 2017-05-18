@@ -8,9 +8,12 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -39,6 +42,9 @@ public class NotesManageActivity extends BaseActivity  {
         if(type.equals("image")) adapter.setShowTitlePassword(true);
 
         listview.setAdapter(adapter);
+        if(listItems.size()==0) {
+            ((TextView)findViewById(R.id.noItemsNoti)).setVisibility(View.VISIBLE);
+        }
         for(Memo m : listItems) {
             adapter.addItem(m);
         }
@@ -52,6 +58,9 @@ public class NotesManageActivity extends BaseActivity  {
                 break;
             case "engword":
                 bg.setColorFilter(ContextCompat.getColor(context, R.color.colorRed), PorterDuff.Mode.MULTIPLY);
+                break;
+            case "pattern":
+                bg.setColorFilter(ContextCompat.getColor(context, R.color.colorGreen), PorterDuff.Mode.MULTIPLY);
                 break;
             default:
                 break;
@@ -67,6 +76,9 @@ public class NotesManageActivity extends BaseActivity  {
                 break;
             case "engword":
                 tv.setText("영단어");
+                break;
+            case "pattern":
+                tv.setText("패턴");
                 break;
             default:
                 break;
