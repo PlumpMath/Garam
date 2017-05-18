@@ -7,14 +7,16 @@ package co.mitsuha.lockscreenlearn;
 public class nmListViewItem {
     private String title;
     private String type;
+    private String password;
     private int id;
 
     public void setTitle(String Title) {
         title = Title;
     }
     public void setType(String Type) {
-        type=Type;
+        type = Type;
     }
+    public void setPassword(String Password) { password = Password; }
     public void setID(int ID) {
         id = ID;
     }
@@ -24,6 +26,7 @@ public class nmListViewItem {
     public String getType() {
         return type;
     }
+    public String getPassword() { return password; }
     public int getID() {
         return id;
     }

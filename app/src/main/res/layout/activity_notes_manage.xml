@@ -25,10 +25,25 @@
             android:layout_margin="10dp"
             android:onClick="mylockMenuClick"
             android:src="@drawable/mylock" />
-       <ListView
+
+        <TextView
+            android:id="@+id/mylockTitle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_rectangle"
+            android:gravity="center_vertical"
+            android:text="Type"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"></TextView>
+        <ListView
            android:id="@+id/noteManageListView"
            android:layout_height="wrap_content"
-           android:layout_width="match_parent">
+           android:layout_width="match_parent"
+           android:divider="@android:color/transparent"
+           android:dividerHeight="10.0dp">
 
        </ListView>
     </LinearLayout>

@@ -1,8 +1,11 @@
 package co.mitsuha.lockscreenlearn;
 
 import android.app.Activity;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,6 +54,18 @@ public class LockScreenActivity extends Activity {
         wv.setBackgroundResource(R.drawable.bg);
 
         List<Memo> memos = saveHelper.getMemos();
+        if(memos.size()==0) {
+            NotificationCompat.Builder mBuilder =
+                    new NotificationCompat.Builder(this)
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setContentTitle("가람")
+                            .setContentText("문제가 없어 잠금화면을 켜지 못했습니다 :(");
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            mNotificationManager.notify(0, mBuilder.build());
+            this.finish();
+            return;
+        }
         int choose = new Random().nextInt(memos.size());
         wv.loadUrl("file:///android_asset/prob_templates/"+memos.get(choose).type+".html?probID="+memos.get(choose).ID+"&ans="+memos.get(choose).password+"&hint="+memos.get(choose).title);
         wv.addJavascriptInterface(new judgeJsInteface(this), "judge");
